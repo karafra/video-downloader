@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+			    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+			    xmlns:with="http://www.thymeleaf.org/extras/with"
+			   layout:decorate="~{layout}"
+			   with:title="'Close'">
+	  
+	<th:block layout:fragment="content">
+
+	<h1 class="display-4" th:text="#{close.h1.text}"></h1>
+	<p class="lead" th:text="#{close.p.lead}"></p>
+	<hr class="my-4">
+	<p th:text="#{close.p.text}"></p>
+	
+	</th:block>
+	
+</html>

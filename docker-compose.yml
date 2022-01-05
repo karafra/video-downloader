@@ -1,0 +1,58 @@
+# Docker compose file reference (https://docs.docker.com/compose/compose-file/)
+version: '3.1'
+
+# Define services
+services:
+    # MySQL Database for the application
+    db:
+        container_name: sbat_mysql_8.0
+        image: mysql:8.0
+        restart: always
+        
+        #Volume mounted for database for the storage
+        volumes:
+            - sbat-data:/var/lib/mysql
+        
+        ports:
+            - "3306:3306"
+        
+        # Environment variable for DB name, password
+        environment:
+            - MYSQL_DATABASE=sbat
+            - MYSQL_USER=sbat
+            - MYSQL_PASSWORD=sbat
+            - MYSQL_ROOT_PASSWORD=sbat
+        networks:
+            - sbat 
+        deploy:
+            resources:
+                limits:
+                    memory: 500M 
+    
+    # Back-end spring boot application with UI
+    app:
+        container_name: sbat_app
+        image: spring-boot-application-template:latest
+        restart: always
+        ports: 
+            - "8080:8080" # Forward the exposed port 8080 on the container to port 8080 on the host machine
+        environment:
+            - "SPRING_PROFILES_ACTIVE=production"
+        networks:
+            - sbat 
+        depends_on:    
+            - db
+        deploy:
+            resources:
+                limits:
+                    memory: 500M   
+        links:
+            - db
+                    
+#Volumes for DB data
+volumes:
+    sbat-data:  
+             
+networks: 
+    sbat:            
+        driver: bridge

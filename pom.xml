@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.arc</groupId>
+	<artifactId>spring-boot-application-template</artifactId>
+	<version>latest</version>
+	<packaging>jar</packaging>
+	
+	<name>spring-boot-application-template</name>
+	<url>https://github.com/AnanthaRajuC/Spring-Boot-Application-Template</url>
+	<description>This repository contains a recipe/scaffolding for bootstrapping a Web Application. Delete the sample code (or keep it.) and add your own, you’re good to go.</description>
+	
+	<!-- Start - Spring Boot Application Template Project Owner -->
+	<developers>
+		<developer>
+			<name>Anantha Raju C</name>
+			<email>arcswdev@gmail.com</email>
+			<timezone>UTC+05:30</timezone>
+		</developer>
+	</developers>
+	<!-- End - Spring Boot Application Template Project Owner -->
+	
+	<!-- Start - Spring Boot Application Template source repository -->
+    <scm>
+        <connection>https://github.com/AnanthaRajuC/Spring-Boot-Application-Template.git</connection>
+        <developerConnection>git@github.com:AnanthaRajuC/Spring-Boot-Application-Template.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+    <!-- End - Spring Boot Application Template source repository -->
+    
+    <!-- Start - Spring Boot Application Template issue management -->
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/issues</url>
+    </issueManagement>
+    <!-- End - Spring Boot Application Template issue management -->
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+		<!--  Dependencies versions properties  -->
+    	<thymeleaf-with-dialect.version>3.0.1</thymeleaf-with-dialect.version>
+		<java.version>1.8</java.version>
+		<bootstrap.version>5.1.3</bootstrap.version>
+		<jquery.version>3.6.0</jquery.version>
+		<jquery-ui.version>1.12.1</jquery-ui.version>
+		<bootstrap-table.version>1.17.1</bootstrap-table.version>
+		<jquery-resizable-columns.version>0.2.3</jquery-resizable-columns.version>
+		<guava.version>31.0.1-jre</guava.version>
+		<json.version>20210307</json.version>
+		<mockito-all.version>1.10.19</mockito-all.version>
+		<springfox-swagger2.version>3.0.0</springfox-swagger2.version>
+		<springfox-swagger-ui.version>3.0.0</springfox-swagger-ui.version>
+		<bucket4j.version>6.4.1</bucket4j.version>
+		<modelmapper.version>2.4.4</modelmapper.version>
+		<jjwt-api.version>0.11.2</jjwt-api.version>
+		<jjwt-impl.version>0.11.2</jjwt-impl.version>
+		<jjwt-jackson.version>0.11.2</jjwt-jackson.version>
+		<jasperreports.version>6.18.1</jasperreports.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+	      <groupId>org.springframework.boot</groupId>
+	      <artifactId>spring-boot-starter-security</artifactId>
+	    </dependency>
+	    <dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+		        <exclusion>
+		            <groupId>com.vaadin.external.google</groupId>
+		            <artifactId>android-json</artifactId>
+		        </exclusion>
+		    </exclusions>
+		</dependency>	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<!-- Start - Database driver for mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- End - Database driver for mysql -->
+		<!-- Start - Database migration dependencies -->
+		<dependency>
+	      <groupId>org.flywaydb</groupId>
+	      <artifactId>flyway-core</artifactId>
+	    </dependency>
+		<!-- End - Database migration dependencies -->
+		
+		<dependency>
+	      <groupId>com.h2database</groupId>
+	      <artifactId>h2</artifactId>
+	      <scope>runtime</scope>
+	    </dependency>
+		
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>7.0.1.Final</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator-annotation-processor</artifactId>
+		    <version>7.0.1.Final</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>${modelmapper.version}</version>
+        </dependency>
+        
+        <dependency>
+		    <groupId>net.sf.jasperreports</groupId>
+		    <artifactId>jasperreports</artifactId>
+		    <version>${jasperreports.version}</version>
+		</dependency>
+
+        <!-- JWT dependencies START -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jjwt-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <scope>runtime</scope>
+            <version>${jjwt-impl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <scope>runtime</scope>
+            <version>${jjwt-jackson.version}</version>
+        </dependency>
+        <!-- JWT dependencies END -->
+		
+		<dependency>
+		    <groupId>io.rest-assured</groupId>
+		    <artifactId>rest-assured</artifactId>
+		    <scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+	      	 <groupId>nz.net.ultraq.thymeleaf</groupId>
+	      	 <artifactId>thymeleaf-layout-dialect</artifactId>
+	    </dependency>		
+	    <dependency>
+	         <groupId>ch.mfrey.thymeleaf.extras.with</groupId>
+	         <artifactId>thymeleaf-with-dialect</artifactId>
+	         <version>${thymeleaf-with-dialect.version}</version>
+	    </dependency>
+		<dependency>
+		    <groupId>org.thymeleaf.extras</groupId>
+		    <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+		</dependency>
+
+	    <!-- Webjars for Bootstrap and Jquery -->
+		<dependency>
+		    <groupId>org.webjars</groupId>
+		    <artifactId>bootstrap</artifactId>
+			<version>${bootstrap.version}</version>
+		</dependency>	 
+		<dependency>
+		    <groupId>org.webjars</groupId>
+		    <artifactId>jquery</artifactId>
+			<version>${jquery.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.webjars.bower</groupId>
+		    <artifactId>jquery-ui</artifactId>
+			<version>${jquery-ui.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.webjars.bower</groupId>
+		    <artifactId>bootstrap-table</artifactId>
+			<version>${bootstrap-table.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.webjars.bower</groupId>
+		    <artifactId>jquery-resizable-columns</artifactId>
+			<version>${jquery-resizable-columns.version}</version>
+		</dependency>	
+		
+		<dependency>
+			<groupId>com.github.vladimir-bukhtoyarov</groupId>
+			<artifactId>bucket4j-core</artifactId>
+			<version>${bucket4j.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.google.guava</groupId>
+		    <artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.squareup.okhttp3</groupId>
+		    <artifactId>okhttp</artifactId>
+		</dependency>		
+		<dependency>
+		    <groupId>org.json</groupId>
+		    <artifactId>json</artifactId>
+			<version>${json.version}</version>
+		</dependency>	
+		
+		<dependency>
+		    <groupId>org.springframework.hateoas</groupId>
+		    <artifactId>spring-hateoas</artifactId>
+		</dependency>
+		
+	   <dependency>
+		  <groupId>com.fasterxml.jackson.dataformat</groupId>
+		  <artifactId>jackson-dataformat-xml</artifactId>
+		</dependency> 
+		<dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-commons</artifactId>
+		</dependency>
+		
+		<!-- Start - POJO creation made easy -->
+		<dependency>
+	      <groupId>org.projectlombok</groupId>
+	      <artifactId>lombok</artifactId>
+	      <optional>true</optional>
+	    </dependency>
+	    <!-- End - POJO creation made easy -->
+
+		<dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-all</artifactId>
+			<version>${mockito-all.version}</version>
+		    <scope>test</scope>
+		</dependency>
+
+		<!-- Start - API documentation with Swagger -->
+		<!-- Swagger -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox-swagger2.version}</version>
+		</dependency>
+		<!-- Swagger UI -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${springfox-swagger-ui.version}</version>
+		</dependency>
+		<!-- End - API documentation with Swagger -->
+
+		<!-- Micrometer Prometheus registry -->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
+
+		<!-- Needed for SMTP appender -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.github.cdimascio</groupId>
+		    <artifactId>java-dotenv</artifactId>
+		    <version>5.2.2</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Package as an executable jar/war. -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- Used during the test phase of the build lifecycle to execute the unit tests. -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+			<!-- Cobertura is a reporting tool that calculates test coverage for a codebase – the percentage of branches/lines accessed by unit tests in a Java project. -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<check/>
+				</configuration>
+			</plugin>
+			<!--  The Javadoc Plugin uses the Javadoc tool to generate javadocs for the specified project. -->
+			<plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-javadoc-plugin</artifactId>
+	            <configuration>
+	                <source>1.8</source>
+	                <target>1.8</target>
+	            </configuration>
+	        </plugin>
+	        <!--  Plugin for building and pushing Docker image to Docker Hub. -->      	        
+	        <plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.13</version>
+				<configuration>
+					<repository>anantha/${project.artifactId}</repository>
+					<tag>${project.version}</tag>
+					<buildArgs>
+						<JAR_FILE>target/${project.artifactId}-${project.version}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>default</id>
+						<phase>install</phase>
+						<goals>
+							<goal>build</goal>
+							<goal>push</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>  	        
+		</plugins>
+	</build>
+	</project>
