@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
-@ComponentScan(basePackages  = "com.karafra.bitchutedl" )
+@ComponentScan(basePackages = "com.karafra.bitchutedl")
 public class BitchuteDlApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BitchuteDlApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BitchuteDlApplication.class, args);
+    }
 }

@@ -5,12 +5,25 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+/**
+ * Configuration for web security.
+ * 
+ * @see <a href="https://spring.io/guides/gs/securing-web/">Documentation</a>
+ * @version 1.0
+ * @since 1.0
+ * @category configuration
+ * @author Karafra
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-  @Override
-  public void configure(HttpSecurity security) throws Exception {
-    security.httpBasic().disable();
-    security.formLogin().disable();
-  }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void configure(HttpSecurity security) throws Exception {
+        // Disables 
+        security.httpBasic().disable();
+        security.formLogin().disable();
+    }
 }

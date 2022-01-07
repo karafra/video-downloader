@@ -1,4 +1,4 @@
-package com.karafra.bitchutedl.parser.DTOs;
+package com.karafra.bitchutedl.web.bitchute.DTOs;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,6 +10,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class ParsedLinkResponseDTO {
-  private String linkRaw;
-  private String linkOriginal;
+    private String linkRaw;
+    private String linkOriginal;
 }

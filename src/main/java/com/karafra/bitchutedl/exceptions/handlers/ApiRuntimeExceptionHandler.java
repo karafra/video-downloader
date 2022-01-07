@@ -17,48 +17,51 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Global exception handler for API, returning JSON instead of plain text.
- * This {@link org.springframework.web.bind.annotation.ControllerAdvice advice}
- * can be overwritten at controller level as it has lowest
- * {@link org.springframework.core.Ordered#LOWEST_PRECEDENCE precedence}.
+ * Global exception handler for API, returning JSON instead of plain text. This
+ * {@link org.springframework.web.bind.annotation.ControllerAdvice advice} can be overwritten at controller level as it
+ * has lowest {@link org.springframework.core.Ordered#LOWEST_PRECEDENCE precedence}.
  * 
+ * @since 1.0
+ * @version 1.0
+ * @category exception
  * @author Karafra
  */
 @ControllerAdvice
 @Order(Ordered.LOWEST_PRECEDENCE)
 public class ApiRuntimeExceptionHandler extends ResponseEntityExceptionHandler {
 
-  /**
-   * Logger.
-   */
-  private static final Logger LOGGER = LoggerFactory.getLogger(ApiRuntimeExceptionHandler.class);
+    /**
+     * Logger.
+     */
+    private static final Logger LOGGER = LoggerFactory.getLogger(ApiRuntimeExceptionHandler.class);
 
-  /**
-   * Private class representing runtime exception, will not be used anywhere else.
-   * 
-   * @author Karafra
-   */
-  @Data
-  @NoArgsConstructor
-  private class JsonResponse {
-    private String message;
-    private int httpStatus;
-  }
+    /**
+     * Private class representing runtime exception, will not be used anywhere else.
+     * 
+     */
+    @Data
+    @NoArgsConstructor
+    private class JsonResponse {
+        private String message;
+        private int httpStatus;
+    }
 
-  /**
-   * Method that handles runtime exceptions.
-   * 
-   * @param ex  exception to be handled
-   * @param req {@link org.springframework.web.context.request.ServletWebRequest
-   *            request} during processing of which RE occurred
-   * @author Karafra
-   */
-  @ExceptionHandler(ApiRuntimeException.class)
-  public ResponseEntity<JsonResponse> handleRuntimeException(ApiRuntimeException ex, ServletWebRequest req) {
-    LOGGER.error("Error occurred in {}", req.getRequest().getRequestURI());
-    JsonResponse jsonResponse = new JsonResponse();
-    jsonResponse.httpStatus = ex.getStatus().value();
-    jsonResponse.setMessage(ex.getMessage());
-    return new ResponseEntity<JsonResponse>(jsonResponse, HttpStatus.BAD_REQUEST);
-  }
+    /**
+     * Method that handles runtime exceptions.
+     * 
+     * @param ex
+     *            exception to be handled
+     * @param req
+     *            {@link org.springframework.web.context.request.ServletWebRequest request} during processing of which
+     *            RE occurred
+     * 
+     */
+    @ExceptionHandler(ApiRuntimeException.class)
+    public ResponseEntity<JsonResponse> handleRuntimeException(ApiRuntimeException ex, ServletWebRequest req) {
+        LOGGER.error("Error occurred in {}", req.getRequest().getRequestURI());
+        JsonResponse jsonResponse = new JsonResponse();
+        jsonResponse.httpStatus = ex.getStatus().value();
+        jsonResponse.setMessage(ex.getMessage());
+        return new ResponseEntity<JsonResponse>(jsonResponse, HttpStatus.BAD_REQUEST);
+    }
 }

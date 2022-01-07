@@ -6,7 +6,7 @@ package com.karafra.bitchutedl.exceptions;
  * @author Karafra
  */
 public class NotValidLinkException extends ApiRuntimeException {
-  public NotValidLinkException(String link) {
-    super(String.format("%s is not valid link", link));
-  }
+    public NotValidLinkException(String link) {
+        super(String.format("%s is not valid link", link));
+    }
 }
