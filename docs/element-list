@@ -1,0 +1,7 @@
+com.karafra.bitchutedl
+com.karafra.bitchutedl.configuration
+com.karafra.bitchutedl.exceptions
+com.karafra.bitchutedl.exceptions.handlers
+com.karafra.bitchutedl.extractor
+com.karafra.bitchutedl.parser
+com.karafra.bitchutedl.parser.DTOs
