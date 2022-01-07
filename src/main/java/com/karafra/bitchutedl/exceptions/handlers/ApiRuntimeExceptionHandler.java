@@ -55,7 +55,7 @@ public class ApiRuntimeExceptionHandler extends ResponseEntityExceptionHandler {
    */
   @ExceptionHandler(ApiRuntimeException.class)
   public ResponseEntity<JsonResponse> handleRuntimeException(ApiRuntimeException ex, ServletWebRequest req) {
-    LOGGER.error(String.format("Error occurred in {}", req.getRequest().getRequestURI()));
+    LOGGER.error("Error occurred in {}", req.getRequest().getRequestURI());
     JsonResponse jsonResponse = new JsonResponse();
     jsonResponse.httpStatus = ex.getStatus().value();
     jsonResponse.setMessage(ex.getMessage());
