@@ -1,5 +1,7 @@
 FROM maven:3.6.0-jdk-11-slim AS build  
 
+LABEL maintainer="dariusKralovic@protonmail.com"
+
 COPY src /usr/src/app/src  
 
 COPY pom.xml /usr/src/app  
