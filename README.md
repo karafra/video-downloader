@@ -210,7 +210,7 @@ Project Link: [https://github.com/karafra/spring-boot](https://github.com/karafr
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* This project acknowledges [SaveTheVid](https://www.savetweetvid.com/) as it's UI is was after refactors used in this project.
+* This project acknowledges [SaveTheVid](https://www.savetweetvid.com/) as it's UI was after refactors used in this project.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
