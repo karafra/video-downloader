@@ -22,7 +22,6 @@ import lombok.NoArgsConstructor;
  * 
  * @since 1.0
  * @version 1.0
- * @category exception
  * @author Karafra
  */
 @ControllerAdvice
@@ -37,8 +36,6 @@ public class ApiRuntimeExceptionHandler extends ResponseEntityExceptionHandler {
      * @version 1.0
      * 
      * @since 1.0
-     * 
-     * @category privateDto
      */
     @Data
     @Generated
@@ -63,7 +60,6 @@ public class ApiRuntimeExceptionHandler extends ResponseEntityExceptionHandler {
      * 
      * @since 1.0
      * 
-     * @category exceptionHandler
      * 
      */
     @ExceptionHandler(ApiRuntimeException.class)

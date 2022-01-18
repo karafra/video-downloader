@@ -14,7 +14,6 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
  * Template engine configuration.
  * 
  * @see <a href="https://www.thymeleaf.org/">Documentation</a>
- * @category configuration
  * @version 1.0
  * @since 1.0
  * @author Karafra

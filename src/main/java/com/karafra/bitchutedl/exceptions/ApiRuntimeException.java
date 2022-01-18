@@ -9,7 +9,6 @@ import lombok.Getter;
  * 
  * @since 1.0
  * @version 1.0
- * @category exception
  * @author Karafra
  */
 public class ApiRuntimeException extends RuntimeException {

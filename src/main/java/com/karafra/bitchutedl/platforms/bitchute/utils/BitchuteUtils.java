@@ -13,8 +13,6 @@ import com.karafra.bitchutedl.exceptions.NotValidLinkException;
  * @version 1.0
  * 
  * @since 1.0
- * 
- * @category utilities
  */
 public final class BitchuteUtils {
 
@@ -28,8 +26,6 @@ public final class BitchuteUtils {
      * @return true if link is valid, false otherwise.
      * 
      * @since 1.0
-     * 
-     * @category utilityFunction
      */
     public static boolean isBitchuteLink(String link) {
         Pattern pattern = Pattern.compile(
@@ -47,8 +43,6 @@ public final class BitchuteUtils {
      * @return link to video.
      * 
      * @since 1.0
-     * 
-     * @category utilityFunction
      */
     public static String idToLink(String id) {
         return String.format("https://www.bitchute.com/video/%s/", id);
@@ -62,8 +56,6 @@ public final class BitchuteUtils {
      * @return download link to video.
      * 
      * @since 1.0
-     * 
-     * @category utilityFunction
      */
     public static String generateDownloadLink(String link) {
         if (!isBitchuteLink(link)) {
@@ -82,8 +74,6 @@ public final class BitchuteUtils {
      * @return download link to video.
      * 
      * @since 1.0
-     * 
-     * @category utilityFunction
      */
     public static String generateViewLink(String link) {
         if (!isBitchuteLink(link)) {

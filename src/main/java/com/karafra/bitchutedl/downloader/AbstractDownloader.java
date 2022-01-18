@@ -13,8 +13,6 @@ import org.springframework.http.ResponseEntity;
  * 
  * @author Karafra
  * 
- * @category service
- * 
  * @since 1.0
  * 
  * @version 1.0

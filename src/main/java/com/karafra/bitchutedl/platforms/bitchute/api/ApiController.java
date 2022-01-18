@@ -23,13 +23,10 @@ import org.springframework.web.servlet.ModelAndView;
  * 
  * @author Karafra
  * 
- * @category controller
- * 
  * @version 1.0
  * 
  * @since 1.0
  * 
- * @category controller
  * 
  * @see <a href="http://www.bitchute.com/">Bitchute</a>
  */
@@ -49,7 +46,6 @@ public class ApiController {
      * 
      * @since 1.0
      * 
-     * @category endpoint
      */
     @GetMapping("/{video}/parse")
     public ParsedLinkResponse parseVideo(@PathVariable("video") String id) {
@@ -65,7 +61,6 @@ public class ApiController {
      * 
      * @since 1.0
      * 
-     * @category endpoint
      */
     @PostMapping("/parse")
     public ParsedLinkResponse parseVideo(@RequestParam ParseLinkRequest parseLinkRequest) {
@@ -88,7 +83,6 @@ public class ApiController {
      * 
      * @since 1.0
      * 
-     * @category endpoint
      */
     @GetMapping("{video}/view")
     public ModelAndView viewVideo(@PathVariable("video") String id) {
@@ -104,7 +98,6 @@ public class ApiController {
      * 
      * @since 1.0
      * 
-     * @category endpoint
      */
     @GetMapping("{video}/download")
     public ResponseEntity<Resource> downloadFile(@PathVariable("video") String id) {
@@ -120,7 +113,6 @@ public class ApiController {
      * 
      * @since 1.0
      * 
-     * @category endpoint
      */
     @PostMapping("/download")
     public ResponseEntity<Resource> downloadFile(@RequestParam DownloadVideoRequest req) {

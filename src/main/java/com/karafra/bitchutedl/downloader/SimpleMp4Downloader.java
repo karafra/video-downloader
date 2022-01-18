@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
  * 
  * @since 1.0
  * @version 1.0
- * @category service
  * @author Karafra
  */
 @Service

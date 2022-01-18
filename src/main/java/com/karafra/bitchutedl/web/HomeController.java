@@ -28,9 +28,7 @@ public class HomeController {
      * 
      * @since 1.0
      * 
-     * @category endpoint
-     * 
-     * @return
+     * @return index page
      */
     @GetMapping
     public ModelAndView index() {
@@ -47,8 +45,6 @@ public class HomeController {
      * @return page containing information about download.
      * 
      * @since 1.0
-     * 
-     * @category endpoint
      */
     @PostMapping("/download")
     public ModelAndView download(@ModelAttribute() IndexPageForm form) {
@@ -68,8 +64,6 @@ public class HomeController {
      * @throws IOException when redirect dows not exits
      * 
      * @since 1.0
-     * 
-     * @category endpoint
      */
     @GetMapping("/download")
     public void download(HttpServletResponse response) throws IOException {

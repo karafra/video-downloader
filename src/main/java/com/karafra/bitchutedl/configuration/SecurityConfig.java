@@ -11,7 +11,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * @see <a href="https://spring.io/guides/gs/securing-web/">Documentation</a>
  * @version 1.0
  * @since 1.0
- * @category configuration
  * @author Karafra
  */
 @Configuration

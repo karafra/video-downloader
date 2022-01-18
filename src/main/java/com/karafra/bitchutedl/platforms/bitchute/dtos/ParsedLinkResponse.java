@@ -13,8 +13,6 @@ import lombok.ToString;
  * @version 1.0
  * 
  * @since 1.0
- * 
- * @category dto
  */
 @Data
 @AllArgsConstructor

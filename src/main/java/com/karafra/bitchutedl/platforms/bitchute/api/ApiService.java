@@ -24,7 +24,6 @@ import org.springframework.web.servlet.ModelAndView;
  * 
  * @author Karafra
  * 
- * @category service
  * 
  * @version 1.0
  * 
@@ -56,7 +55,6 @@ public class ApiService {
      * 
      * @since 1.0
      * 
-     * @category logic
      */
     public ParsedLinkResponse getTarget(String link) {
         if (!BitchuteUtils.isBitchuteLink(link)) {
@@ -77,7 +75,6 @@ public class ApiService {
      * 
      * @since 1.0
      * 
-     * @category logic
      */
     public ParsedLinkResponse getTargetFromId(String id) {
         return getTarget(BitchuteUtils.idToLink(id));
@@ -91,8 +88,6 @@ public class ApiService {
      * @return view and model of website for viewing videos,
      * 
      * @since 1.0
-     * 
-     * @category logic
      */
     public ModelAndView viewVideoById(String id) {
         ParsedLinkResponse response = getTargetFromId(id);
@@ -109,8 +104,6 @@ public class ApiService {
      * @return downloadable resource.
      * 
      * @since 1.0
-     * 
-     * @category logic
      */
     public ResponseEntity<Resource> downloadVideo(String id) {
         return downloadVideo(new DownloadVideoRequest(BitchuteUtils.idToLink(id)));
@@ -124,8 +117,6 @@ public class ApiService {
      * @return downloadable resource.
      * 
      * @since 1.0
-     * 
-     * @category logic
      */
     public ResponseEntity<Resource> downloadVideo(DownloadVideoRequest req) {
         if (!BitchuteUtils.isBitchuteLink(req.getLinkToVideo())) {

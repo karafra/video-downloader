@@ -20,8 +20,6 @@ import org.springframework.stereotype.Service;
  * @version 1.0
  * 
  * @since 1.0
- * 
- * @category service
  */
 @Service
 public class BitchuteParser extends AbstractSimpleParser {
@@ -50,8 +48,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * {@inheritDoc}
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     @Override
     public DownloadPageProps extract(String linkToVideo) {
@@ -78,8 +74,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * @return target of video player.
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     protected String getTarget() {
         Element element = getElementByXpath("//*[@id=\"player\"]/source");
@@ -94,8 +88,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * @return target of video player.
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     public String getTarget(String link) {
         get(link);
@@ -110,8 +102,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * @return title of video.
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     public String getTitle(String link) {
         get(link);
@@ -124,8 +114,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * @return title of video.
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     protected String getTitle() {
         Element element = getElementByXpath("//*[@id=\"video-title\"]");
@@ -140,8 +128,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * @return date the video was published.
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     public String getDate(String link) {
         get(link);
@@ -154,8 +140,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * @return date the video was published.
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     protected String getDate() {
         Element element =
@@ -171,8 +155,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * @return publisher of video.
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     public String getPublisher(String link) {
         get(link);
@@ -185,8 +167,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * @return publisher of video.
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     protected String getPublisher() {
         Element element = getElementByXpath(
@@ -202,8 +182,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * @return format of video.
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     protected String getFormat(String rawLink) {
         String[] linkSplit = rawLink.split("\\.");
@@ -216,8 +194,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * @return gets thumbnail of video.
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     protected String getThumbnailLink() {
         Element element = getElementByXpath("//*[@id=\"player\"]");
@@ -232,8 +208,6 @@ public class BitchuteParser extends AbstractSimpleParser {
      * @return gets thumbnail of video.
      * 
      * @since 1.0
-     * 
-     * @category parserFunction
      */
     public String getThumbnailLink(String link) {
         get(link);

@@ -16,8 +16,6 @@ import lombok.Generated;
  * @since 1.0
  * 
  * @version 1.0
- * 
- * @category CLI
  */
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 @ComponentScan(basePackages = "com.karafra.bitchutedl")

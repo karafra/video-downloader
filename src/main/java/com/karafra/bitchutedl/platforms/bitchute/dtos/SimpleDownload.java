@@ -14,8 +14,6 @@ import lombok.NoArgsConstructor;
  * @since 1.0
  * 
  * @author Karafra.
- * 
- * @category dto
  */
 @Data
 @NoArgsConstructor
