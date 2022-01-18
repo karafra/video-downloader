@@ -22,8 +22,8 @@ import lombok.Generated;
 public class BitchuteDlApplication {
 
     /**
-     * Method used for running this application from command line.
-     * This is the main method of whole application.
+     * Method used for running this application from command line. This is the main method of whole
+     * application.
      * 
      * @param args
      */
