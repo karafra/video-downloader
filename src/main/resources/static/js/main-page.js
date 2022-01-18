@@ -53,7 +53,7 @@ $(function () {
   });
 });
 
-const bitchuteRegex = new RegExp("https?:\/\/(?:www)?\.?bitchute\.com\/video\/([a-zA-Z0-9]{1,64})\/")
+const bitchuteRegex = new RegExp("https?:\/\/(?:www)?\.?bitchute.com\/video\/([a-zA-Z0-9]{1,64})\/")
   
 const validateForm = () => {
   const value = document.getElementById("url-field").value;
