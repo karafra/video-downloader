@@ -35,7 +35,7 @@
 <h3 align="center">Spring boot downloader</h3>
 
   <p align="center">
-    utility for easy download of videos directly from CDN
+    Utility for easy download of videos directly from CDN
     <br />
     <a href="https://github.com/karafra/spring-boot"><strong>Explore the docs »</strong></a>
     <br />
@@ -82,21 +82,19 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `karafra`, `spring-boot`, `Karafro`, `linkedin_username`, `dariusKralovic`, `dariusKralovic_client`, `Spring boot downloader`, `utility for easy download of videos directly from CDN`
-
+Simple website used for downloading videos from various websites without storing them on server side at all (directly from CDM of platform)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
+* [Java](https://www.oracle.com/java/technologies/)
+* [Spring Boot](https://spring.io/projects/spring-boot)
+* [Mockito](https://site.mockito.org/)
+* [Thymeleaf](https://www.thymeleaf.org/)
+* [Docker](https://www.thymeleaf.org/)
+* [Jsoup](https://jsoup.org/)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 
