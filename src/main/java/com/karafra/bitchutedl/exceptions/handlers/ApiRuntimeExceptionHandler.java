@@ -2,8 +2,6 @@ package com.karafra.bitchutedl.exceptions.handlers;
 
 import com.karafra.bitchutedl.exceptions.ApiRuntimeException;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.ResponseEntity;
@@ -30,11 +28,6 @@ import lombok.NoArgsConstructor;
 @ControllerAdvice
 @Order(Ordered.LOWEST_PRECEDENCE)
 public class ApiRuntimeExceptionHandler extends ResponseEntityExceptionHandler {
-
-    /**
-     * Logger service.
-     */
-    private static final Logger LOGGER = LoggerFactory.getLogger(ApiRuntimeExceptionHandler.class);
 
     /**
      * Private class representing runtime exception, will not be used anywhere else.

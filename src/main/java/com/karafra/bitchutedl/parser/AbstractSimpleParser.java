@@ -3,7 +3,6 @@ package com.karafra.bitchutedl.parser;
 import java.io.IOException;
 import java.util.Objects;
 
-
 import com.karafra.bitchutedl.exceptions.NotValidLinkException;
 import com.karafra.bitchutedl.exceptions.WrongXPathException;
 import com.karafra.bitchutedl.platforms.bitchute.dtos.DownloadPageProps;

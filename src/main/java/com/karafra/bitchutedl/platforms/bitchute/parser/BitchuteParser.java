@@ -1,7 +1,5 @@
 package com.karafra.bitchutedl.platforms.bitchute.parser;
 
-import java.io.IOException;
-
 import com.karafra.bitchutedl.exceptions.NotValidLinkException;
 import com.karafra.bitchutedl.parser.AbstractSimpleParser;
 import com.karafra.bitchutedl.platforms.bitchute.dtos.Download;

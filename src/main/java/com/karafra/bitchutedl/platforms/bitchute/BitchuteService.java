@@ -1,12 +1,10 @@
 package com.karafra.bitchutedl.platforms.bitchute;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 import com.karafra.bitchutedl.downloader.AbstractDownloader;
 import com.karafra.bitchutedl.exceptions.FileDownloadException;
-import com.karafra.bitchutedl.exceptions.NotValidLinkException;
 import com.karafra.bitchutedl.platforms.bitchute.dtos.DownloadPageProps;
 import com.karafra.bitchutedl.platforms.bitchute.parser.BitchuteParser;
 import com.karafra.bitchutedl.processing.IProcessingService;
