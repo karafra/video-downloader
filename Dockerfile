@@ -1,14 +1,17 @@
-# For Java 11, try this
-FROM adoptopenjdk/openjdk11:alpine-jre
+FROM maven:3.6.0-jdk-11-slim AS build  
 
-# Refer to Maven build -> finalName
-ARG JAR_FILE=target/spring-boot-web.jar
+COPY src /usr/src/app/src  
 
-# cd /opt/app
-WORKDIR /opt/app
+COPY pom.xml /usr/src/app  
 
-# cp target/spring-boot-web.jar /opt/app/app.jar
-COPY ${JAR_FILE} app.jar
+COPY checkstyle.xml /usr/src/app  
 
-# java -jar /opt/app/app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+RUN mvn -f /usr/src/app/pom.xml clean package
+
+FROM openjdk:11-jre-slim 
+
+COPY --from=build /usr/src/app/target/bitchute-dl-0.0.1-SNAPSHOT.war /usr/app/bitchute-dl-0.0.1-SNAPSHOT.war  
+
+EXPOSE 8080 
+
+CMD ["java","-jar","/usr/app/demo-0.0.1-SNAPSHOT.jar"] 
