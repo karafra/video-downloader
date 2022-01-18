@@ -36,5 +36,7 @@ jobs:
         if [[ `git status --porcelain` ]]; then
           git config --global user.name 'karafra'
           git config --global user.email '55988328@users.noreply.github.com'
-    
+          git add -A
+          git commit -m "Automated API website updates. :books:"
+        fi
 
