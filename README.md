@@ -37,7 +37,7 @@
   <p align="center">
     Utility for easy download of videos directly from CDN
     <br />
-    <a href="https://github.com/karafra/spring-boot"><strong>Explore the docs »</strong></a>
+    <a href="https://karafra.github.io/spring-boot/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/karafra/spring-boot">View Demo</a>
@@ -105,31 +105,43 @@ Simple website used for downloading videos from various websites without storing
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+For running this project in development mode Java 11 and maven are needed
+* maven
   ```sh
-  npm install npm@latest -g
+  sudo apt update
+  sudo apt install maven
+  ```
+  You can verify installation by typing
+  ```sh
+  mvn -version
+  ```
+* Java
+  ```sh
+  sudo apt update
+  sudo apt-get install openjdk-11-jdk
+  ```
+  You can verify installation by typing
+  ```sh
+  java -version
   ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/karafra/spring-boot.git
    ```
-3. Install NPM packages
+2. Install packages
    ```sh
-   npm install
+   mvn clean install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Start project
+   ```sh
+   mvn spring-boot:run
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
