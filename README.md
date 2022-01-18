@@ -22,7 +22,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 [![codecov][codecov-shield]][codecov-url]
 
 <!-- PROJECT LOGO -->
@@ -151,9 +150,7 @@ For running this project in development mode Java 11 and maven are needed
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+As of now this downloader suppotrs only downloading from bitchute, simply copy link of bitchute video and paste it, then on the download screen click download and wait for download to start.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -162,10 +159,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
+- [x] Add option to download from bitchute
+- [ ] Extend this skeleton to enable downloads from websites like [Youtube](https://www.youtube.com/) and [Twitter](https://twitter.com/)
+  - [ ] Add option to download videos from TV archives such as [Voyo](https://voyo.markiza.sk/) or [Tv Joj archive](https://voyo.markiza.sk/)
 
 See the [open issues](https://github.com/karafra/spring-boot/issues) for a full list of proposed features (and known issues).
 
@@ -194,7 +190,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the Apache License 2.0. See [LICENSE](./LICENSE) for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -214,9 +210,7 @@ Project Link: [https://github.com/karafra/spring-boot](https://github.com/karafr
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* This project acknowledges [SaveTheVid](https://www.savetweetvid.com/) as it's UI is was after refactors used in this project.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -234,8 +228,6 @@ Project Link: [https://github.com/karafra/spring-boot](https://github.com/karafr
 [issues-url]: https://github.com/karafra/spring-boot/issues
 [license-shield]: https://img.shields.io/github/license/karafra/spring-boot.svg?style=for-the-badge
 [license-url]: https://github.com/karafra/spring-boot/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
 [codecov-shield]: https://img.shields.io/codecov/c/github/karafra/spring-boot/master?style=for-the-badge&token=JT7B2MF504
 [codecov-url]: https://codecov.io/gh/karafra/spring-boot
