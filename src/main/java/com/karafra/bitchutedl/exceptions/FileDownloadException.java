@@ -9,12 +9,12 @@ package com.karafra.bitchutedl.exceptions;
  * @author Karafra
  */
 public class FileDownloadException extends ApiRuntimeException {
-  /**
-   * Constructor used when only message is provided.
-   * 
-   * @param message
-   */
-  public FileDownloadException(String message) {
-    super(message);
-  }
+    /**
+     * Constructor used when only message is provided.
+     * 
+     * @param message
+     */
+    public FileDownloadException(String message) {
+        super(message);
+    }
 }

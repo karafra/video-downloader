@@ -25,11 +25,10 @@ public class SimpleMp4Downloader extends AbstractDownloader {
     @Override
     public Resource downloadAsResource(URL url) {
         Resource resource = new UrlResource(url);
-        if (resource.exists() && resource.isReadable()) {
+        if (resource.exists()) {
             return resource;
         }
         throw new FileDownloadException(
-                String.format("Such file does not exist (%s)",
-                        url.toString()));
+                String.format("Such file does not exist (%s)", url.toString()));
     }
 }

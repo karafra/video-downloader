@@ -22,8 +22,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     public void configure(HttpSecurity security) throws Exception {
-        // Disables 
+        // Disables
         security.httpBasic().disable();
         security.formLogin().disable();
+        security.headers().frameOptions().sameOrigin();
     }
 }

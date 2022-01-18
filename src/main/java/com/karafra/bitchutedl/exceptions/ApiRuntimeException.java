@@ -32,8 +32,7 @@ public class ApiRuntimeException extends RuntimeException {
     /**
      * Constructor used when status code is provided.
      * 
-     * @param status
-     *            status code to be returned.
+     * @param status status code to be returned.
      */
     public ApiRuntimeException(HttpStatus status) {
         super();
@@ -45,8 +44,7 @@ public class ApiRuntimeException extends RuntimeException {
      * 
      * Status code will be {@link org.springframework.http.HttpStatus#BAD_REQUEST 400}.
      * 
-     * @param message
-     *            simple string describing exception.
+     * @param message simple string describing exception.
      */
     public ApiRuntimeException(String message) {
         super(message);
@@ -55,10 +53,8 @@ public class ApiRuntimeException extends RuntimeException {
     /**
      * Constructor used when message and status is provided.
      *
-     * @param message
-     *            description of exception.
-     * @param status
-     *            status to be returned.
+     * @param message description of exception.
+     * @param status status to be returned.
      */
     public ApiRuntimeException(String message, HttpStatus status) {
         super(message);
@@ -70,10 +66,8 @@ public class ApiRuntimeException extends RuntimeException {
      * 
      * Status code will be {@link org.springframework.http.HttpStatus#BAD_REQUEST 400}.
      * 
-     * @param message
-     *            description of exception.
-     * @param cause
-     *            case of exception.
+     * @param message description of exception.
+     * @param cause case of exception.
      */
     public ApiRuntimeException(String message, Throwable cause) {
         super(message, cause);
@@ -82,12 +76,9 @@ public class ApiRuntimeException extends RuntimeException {
     /**
      * Constructor used when message and cause is provided.
      * 
-     * @param message
-     *            description of exception.
-     * @param cause
-     *            case of exception.
-     * @param status
-     *            status to be returned.
+     * @param message description of exception.
+     * @param cause case of exception.
+     * @param status status to be returned.
      */
     public ApiRuntimeException(String message, Throwable cause, HttpStatus status) {
         super(message, cause);
@@ -99,8 +90,7 @@ public class ApiRuntimeException extends RuntimeException {
      * 
      * Status code will be {@link org.springframework.http.HttpStatus#BAD_REQUEST 400}.
      * 
-     * @param cause
-     *            cause of exception.
+     * @param cause cause of exception.
      */
     public ApiRuntimeException(java.lang.Throwable cause) {
         super(cause);
@@ -109,10 +99,8 @@ public class ApiRuntimeException extends RuntimeException {
     /**
      * Constructor used when cause and status is provided.
      * 
-     * @param cause
-     *            cause of error.
-     * @param status
-     *            status code to be returned.
+     * @param cause cause of error.
+     * @param status status code to be returned.
      */
     public ApiRuntimeException(java.lang.Throwable cause, HttpStatus status) {
         super(cause);

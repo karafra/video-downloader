@@ -27,6 +27,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     /**
      * thymeleaf template resolver.
+     * 
      * @return thymeleaf template resolver for folder "templates".
      */
     @Bean
@@ -43,6 +44,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     /**
      * Spring template engine translator.
+     * 
      * @return configured spring template engine.
      */
     @Bean
@@ -55,6 +57,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     /**
      * Thymeleaf view resolver.
+     * 
      * @return thymeleaf view resolver.
      */
     @Bean

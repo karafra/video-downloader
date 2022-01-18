@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitchute Video Downloader - Download Bitchute Videos to MP4 &amp; MP3</title>
+  <meta name="description"
+    content="Download Bitchute Videos - Online, It&#039;s free, fast &amp; easy to use, Save Twitter Videos &amp; GIF from Tweets to MP3, MP4. Download any Twitter Video or GIF with one simple click.">
+  <meta name="keywords"
+    content="twitter video downloader,save twitter videos,twitter to mp4,twitter to mp3,download twitter videos,twitter download video,download gif from twitter">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  
+  <!-- Link preview  -->
+  <meta property="og:type" content="share">
+  <meta property="og:title" content="Bitchute video downloader">
+  <meta property="og:description" content="Download Bitchute Videos - Online, It&#039;s free, fast &amp; easy to use, Save Bitchute Videos &amp; Bitchute video to MP3, MP4. Download any Bitchute Video or GIF with one simple click.">
+  <meta property="og:image" th:content="@{images/favicon.svg}">
+  
+  <link rel="icon" th:href="@{images/favicon.svg}" type="x-icon" />
+  <link rel="shortcut icon" type="image/x-icon" href="" th:href="@{images/favicon.svg}"/>
+</head>
+
+<body>
+  <video width="auto" height="auto" controls style=" margin-left: auto; margin-right: auto; display: block;">
+    <source th:src="${videoLink}" type="video/mp4">
+  </video>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Bitchute Video Downloader - Download Bitchute Videos to MP4 &amp; MP3</title>
+  <meta name="description"
+    content="Download Bitchute Videos - Online, It&#039;s free, fast &amp; easy to use, Save Twitter Videos &amp; GIF from Tweets to MP3, MP4. Download any Twitter Video or GIF with one simple click.">
+  <meta name="keywords"
+    content="twitter video downloader,save twitter videos,twitter to mp4,twitter to mp3,download twitter videos,twitter download video,download gif from twitter">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  
+  <!-- Link preview  -->
+  <meta property="og:type" content="share">
+  <meta property="og:title" content="Bitchute video downloader">
+  <meta property="og:description" content="Download Bitchute Videos - Online, It&#039;s free, fast &amp; easy to use, Save Bitchute Videos &amp; Bitchute video to MP3, MP4. Download any Bitchute Video or GIF with one simple click.">
+  <meta property="og:image" th:content="@{images/favicon-share.svg}">
+  
+  <link rel="icon" th:href="@{images/favicon.svg}" type="image/x-icon" />
+  <link rel="shortcut icon" type="image/x-icon" th:href="@{images/favicon.svg}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{css/bootstrap.min.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{css/main-page.css}">
+  <script th:src="@{js/jquery.min.js}"></script>
+  <script th:src="@{js/bootstrap.min.js}"></script>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" async="async"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" async="async"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="jumbotron custom-jum no-mrg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="center">
+            <div class="home-search">
+              <h1>Bitchute Video Downloader</h1>
+              <h2>Download Bitchute Videos to Mp4 &amp; Mp3</h2>
+            </div>
+            <div class="form-home-search">
+              <form th:action="@{/download/}" th:object="${indexPageForm}" method="POST" id="form_download", onsubmit="return validateForm()">
+                <div class="input-group col-lg-10 col-md-10 col-sm-10">
+                  <input name="url" class="form-control input-md ht58" placeholder="Enter Bitchute link ..." type="text"
+                    required value="" id="url-field">
+                  <span class="input-group-btn"><button class="btn btn-primary input-md btn-download ht58"
+                      id="btn_submit" type="submit">Download</button></span>
+                </div>
+              </form>
+            </div>
+            <div class="ads text-center" style="margin-top: 28px;">
+              <!-- Ads will be put here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-8">
+          <div class="wrap-txt">
+            <h3>
+              <strong>online Bitchute video downloader</strong>
+            </h3>
+            <p>This is Bitchute Video Downloader, a free online tool to download and save videos and GIFs from
+              Bitchute.</p>
+            <p>By using our downloader you can easily convert and download Bitchute videos to mp4 , mp3 and gif files and
+              download them for free - this service works for computers, tablets and mobile devices. you need to copy
+              the tweet URL and paste it in the above text box. SaveTweetVid will extract the Bitchute video links from
+              the tweet and you can save Bitchute videos or audio to your computer, android or iPhone.</p>
+            <p>Why choose our Bitchute converter and downloader to download your mp4/mp3/gif files? Our service is
+              easy-to-use, it doesn&#039;t require any registration or fees and it’s available in different languages.
+              This tool is exactly what you need.</p>
+          </div>
+          <div class="wrap-txt">
+            <h3>
+              <strong>How to use Bitchute Downloader ?</strong>
+            </h3>
+            <ul class="lists-home">
+              <li>1. Paste the link of video you want to download</li>
+              <li>2. Click &quot;Download&quot; button to begin downloading process</li>
+              <li>3. Select the mp4/mp3 format you want to download, then click &quot;Download&quot; button</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <!-- Ads will be put here -->
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script th:src="@{js/main-page.js}"></script>
+  <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p>BitchuteDl is officially not associated with Bitchute. It does not host or entertain any pirated or
+              copyright content on its server and all the videos that are downloaded are done directly from their CDN
+              servers on to the respective user&#039;s machine.</p>
+          </div>
+        </div>
+      </div>
+  </footer>
+</body>
+</html>
