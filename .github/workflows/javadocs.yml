@@ -1,0 +1,40 @@
+name: Documentation
+
+on:
+  push:
+    branches: [ master ]
+    paths: [ '**.java' ]
+
+jobs:
+  api-website:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v2
+
+    - name: Set up the Java JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+
+    - name: Build docs with Maven
+      run: mvn javadoc:javadoc
+
+    - name: Tidy up the javadocs
+      id: tidy
+      uses: cicirello/javadoc-cleanup@v1
+      with:
+        path-to-root: docs
+    
+    - name: Log javadoc-cleanup output
+      run: |
+        echo "modified-count = ${{ steps.tidy.outputs.modified-count }}"
+    
+    - name: Commit documentation changes
+      run: |
+        if [[ `git status --porcelain` ]]; then
+          git config --global user.name 'karafra'
+          git config --global user.email '55988328@users.noreply.github.com'
+    
+

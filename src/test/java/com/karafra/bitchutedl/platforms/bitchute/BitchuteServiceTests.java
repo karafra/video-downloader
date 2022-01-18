@@ -20,7 +20,6 @@ import com.karafra.bitchutedl.platforms.bitchute.dtos.Download;
 import com.karafra.bitchutedl.platforms.bitchute.dtos.DownloadPageProps;
 import com.karafra.bitchutedl.platforms.bitchute.parser.BitchuteParser;
 
-import org.antlr.v4.runtime.NoViableAltException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
