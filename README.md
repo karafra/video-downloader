@@ -228,6 +228,6 @@ Project Link: [https://github.com/karafra/spring-boot](https://github.com/karafr
 [issues-url]: https://github.com/karafra/spring-boot/issues
 [license-shield]: https://img.shields.io/github/license/karafra/spring-boot.svg?style=for-the-badge
 [license-url]: https://github.com/karafra/spring-boot/blob/master/LICENSE.txt
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/screenshot.GIF
 [codecov-shield]: https://img.shields.io/codecov/c/github/karafra/spring-boot/master?style=for-the-badge&token=JT7B2MF504
 [codecov-url]: https://codecov.io/gh/karafra/spring-boot
