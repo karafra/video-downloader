@@ -33,6 +33,8 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
+      - name: Build with Maven
+        run: mvn test
       - uses: codecov/codecov-action@v1
         with:
           file: ./target/coverage-reports/jacoco/jacoco.xml
