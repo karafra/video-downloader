@@ -67,8 +67,6 @@ public class HomeController {
      * 
      * @throws IOException when redirect dows not exits
      * 
-     *         {@inheritDoc}
-     * 
      * @since 1.0
      * 
      * @category endpoint

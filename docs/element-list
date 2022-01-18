@@ -1,0 +1,15 @@
+com.karafra.bitchutedl
+com.karafra.bitchutedl.configuration
+com.karafra.bitchutedl.configuration.customizer
+com.karafra.bitchutedl.downloader
+com.karafra.bitchutedl.exceptions
+com.karafra.bitchutedl.exceptions.handlers
+com.karafra.bitchutedl.exceptions.resolvers
+com.karafra.bitchutedl.parser
+com.karafra.bitchutedl.platforms.bitchute
+com.karafra.bitchutedl.platforms.bitchute.api
+com.karafra.bitchutedl.platforms.bitchute.dtos
+com.karafra.bitchutedl.platforms.bitchute.parser
+com.karafra.bitchutedl.platforms.bitchute.utils
+com.karafra.bitchutedl.processing
+com.karafra.bitchutedl.web
