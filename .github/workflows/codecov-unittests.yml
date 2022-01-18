@@ -1,7 +1,10 @@
-name: Test
+name: Unit tetst
 
-on: [push, pull_request]
-
+on: 
+  pull_request:
+  push:
+    branches:
+    - master 
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,9 +21,5 @@ jobs:
     - uses: codecov/codecov-action@v1
       with:
         file: ./target/coverage-reports/jacoco/jacoco.xml
-        flags: smiles
-    - uses: codecov/codecov-action@v1
-      with:
-        file: ./target/coverage-reports/jacoco/jacoco.xml
-        flags: old-features
+        flags: codecov
 
