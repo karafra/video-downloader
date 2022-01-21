@@ -1,11 +1,17 @@
 package com.karafra.bitchutedl.platforms.joj.parser;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+
+import java.io.IOException;
+
+import com.karafra.bitchutedl.exceptions.NotValidLinkException;
+import com.karafra.bitchutedl.platforms.bitchute.dtos.DownloadPageProps;
 
 import org.jsoup.nodes.Element;
 import org.junit.jupiter.api.DisplayName;
@@ -26,8 +32,8 @@ public class JojParserTests {
     public void shouldGetEmbed() {
         // Given
         String expectedTarget = "target";
-        when(mockJojParser.getLinkToEmbed(anyString())).thenReturn(expectedTarget);
-        when(mockJojParser.getLinkToEmbed()).thenCallRealMethod();
+        when(mockJojParser.getLinkToEmbed(anyString())).thenCallRealMethod();
+        when(mockJojParser.getLinkToEmbed()).thenReturn(expectedTarget);
         // When
         String target = mockJojParser.getLinkToEmbed("");
         // Then
@@ -41,8 +47,8 @@ public class JojParserTests {
     public void shouldNotGetEmbed() {
         // Given
         String expectedTarget = "";
-        when(mockJojParser.getLinkToEmbed(anyString())).thenReturn(expectedTarget);
-        when(mockJojParser.getLinkToEmbed()).thenCallRealMethod();
+        when(mockJojParser.getLinkToEmbed(anyString())).thenCallRealMethod();
+        when(mockJojParser.getLinkToEmbed()).thenReturn(expectedTarget);
         // When
         String target = mockJojParser.getLinkToEmbed("");
         // Then
@@ -83,5 +89,19 @@ public class JojParserTests {
         verify(mockJojParser, times(0)).getLinkToEmbed(anyString());
         verify(mockJojParser).getElementByXpath(anyString());
         assertEquals(expectedTarget, response);
+    }
+
+    @Test
+    @Tag("basic")
+    @DisplayName("Should not extract if empty link")
+    public void shouldNotExtractIfEmptyLink() throws IOException {
+        // Given
+        String emptyLink = "\t \n";
+        when(mockJojParser.extract(anyString())).thenCallRealMethod();
+        // When
+        NotValidLinkException ex =
+                assertThrows(NotValidLinkException.class, () -> mockJojParser.extract(emptyLink));
+        // Then
+        assertEquals(new NotValidLinkException(emptyLink).getMessage(), ex.getMessage());
     }
 }
