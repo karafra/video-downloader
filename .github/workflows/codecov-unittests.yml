@@ -1,4 +1,4 @@
-name: Unit tests
+name: Codecov
 
 on: 
   pull_request:

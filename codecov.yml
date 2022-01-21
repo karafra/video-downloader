@@ -19,7 +19,8 @@ flag_management:
         type: patch
         target: 90%
 comment:
-  require_changes: true
-
+  layout: "reach, diff, files"
+  require_head: true
+  require_changes: false
 ignore:
   - 'src/tests'
