@@ -29,7 +29,7 @@ public final class BitchuteUtils {
      */
     public static boolean isBitchuteLink(String link) {
         Pattern pattern = Pattern.compile(
-                "https?:\\/\\/(?:www)?\\.?bitchute\\.com\\/video\\/([a-zA-Z0-9]{1,64})\\/",
+                "https?:\\/\\/(?:www)?\\.?bitchute.com\\/video\\/([a-zA-Z0-9]{1,64})\\/",
                 Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(link);
         return matcher.matches();
