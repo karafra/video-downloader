@@ -1,4 +1,4 @@
-name: Unit tests
+name: Codecov
 
 on: 
   pull_request:
@@ -20,6 +20,5 @@ jobs:
       run: mvn -B package --file pom.xml
     - uses: codecov/codecov-action@v1
       with:
-        file: ./target/coverage-reports/jacoco/jacoco.xml
+        file: target/coverage-reports/jacoco/jacoco.xml
         flags: codecov
-

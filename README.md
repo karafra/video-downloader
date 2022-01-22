@@ -150,7 +150,7 @@ For running this project in development mode Java 11 and maven are needed
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-As of now this downloader suppotrs only downloading from bitchute, simply copy link of bitchute video and paste it, then on the download screen click download and wait for download to start.
+As of now this downloader supports only downloading from bitchute, simply copy link of bitchute video and paste it, then on the download screen click download and wait for download to start.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
