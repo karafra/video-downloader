@@ -53,7 +53,8 @@ public class JojParser extends AbstractSimpleParser {
     }
 
     protected String getTarget() {
-        Element element = getElementByXpath("//iframe[contains(@class, \"rmp-object-fit-contain rmp-video\")]");
+        Element element = getElementByXpath(
+                "//iframe[contains(@class, \"rmp-object-fit-contain rmp-video\")]");
         return element.attr("src");
     }
 

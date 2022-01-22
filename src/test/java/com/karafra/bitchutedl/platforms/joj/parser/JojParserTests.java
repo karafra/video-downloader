@@ -78,52 +78,52 @@ public class JojParserTests {
     @Tag("basic")
     @DisplayName("Should not get embed by link")
     public void shouldNotGetEmbedWithoutLink() {
-      // Given
-      String expectedTarget = "";
-      Element element = new Element("iframe");
-      when(mockJojParser.getElementByXpath(anyString())).thenReturn(element);
-      when(mockJojParser.getLinkToEmbed()).thenCallRealMethod();
-      // When
-      String response = mockJojParser.getLinkToEmbed();
-      // Then
-      verify(mockJojParser, times(0)).getLinkToEmbed(anyString());
-      verify(mockJojParser).getElementByXpath(anyString());
-      assertEquals(expectedTarget, response);
+        // Given
+        String expectedTarget = "";
+        Element element = new Element("iframe");
+        when(mockJojParser.getElementByXpath(anyString())).thenReturn(element);
+        when(mockJojParser.getLinkToEmbed()).thenCallRealMethod();
+        // When
+        String response = mockJojParser.getLinkToEmbed();
+        // Then
+        verify(mockJojParser, times(0)).getLinkToEmbed(anyString());
+        verify(mockJojParser).getElementByXpath(anyString());
+        assertEquals(expectedTarget, response);
     }
-    
+
     @Test
     @Tag("basic")
     @DisplayName("Should get target by link")
     public void shouldGetTargetByLink() {
-      // Given
-      String target = "target";
-      when(mockJojParser.getTarget()).thenReturn(target);
-      when(mockJojParser.getTarget(anyString())).thenCallRealMethod();
-      // When
-      String targetResponse = mockJojParser.getTarget("link");
-      // Then
-      verify(mockJojParser).get(anyString());
-      verify(mockJojParser).getTarget();
-      assertEquals(target, targetResponse);
+        // Given
+        String target = "target";
+        when(mockJojParser.getTarget()).thenReturn(target);
+        when(mockJojParser.getTarget(anyString())).thenCallRealMethod();
+        // When
+        String targetResponse = mockJojParser.getTarget("link");
+        // Then
+        verify(mockJojParser).get(anyString());
+        verify(mockJojParser).getTarget();
+        assertEquals(target, targetResponse);
     }
 
     @Test
     @Tag("basic")
     @DisplayName("Should get target by link")
     public void shouldNotGetTargetByLink() {
-      // Given
-      String target = "";
-      when(mockJojParser.getTarget()).thenReturn(target);
-      when(mockJojParser.getTarget(anyString())).thenCallRealMethod();
-      // When
-      String targetResponse = mockJojParser.getTarget("link");
-      // Then
-      verify(mockJojParser).get(anyString());
-      verify(mockJojParser).getTarget();
-      assertEquals(target, targetResponse);
+        // Given
+        String target = "";
+        when(mockJojParser.getTarget()).thenReturn(target);
+        when(mockJojParser.getTarget(anyString())).thenCallRealMethod();
+        // When
+        String targetResponse = mockJojParser.getTarget("link");
+        // Then
+        verify(mockJojParser).get(anyString());
+        verify(mockJojParser).getTarget();
+        assertEquals(target, targetResponse);
     }
 
-   @Test
+    @Test
     @Tag("basic")
     @DisplayName("Should get target")
     public void shouldGetTarget() {
@@ -132,9 +132,9 @@ public class JojParserTests {
         when(mockJojParser.getTarget(anyString())).thenCallRealMethod();
         when(mockJojParser.getTarget()).thenReturn(expectedTarget);
         // When
-        String target = mockJojParser.getTarget("");
+        String target = mockJojParser.getTarget();
         // Then
-        verify(mockJojParser).getTarget(anyString());
+        verify(mockJojParser, times(0)).getElementByXpath(anyString());
         assertTrue(target.equals(expectedTarget));
     }
 
@@ -147,9 +147,9 @@ public class JojParserTests {
         when(mockJojParser.getTarget(anyString())).thenCallRealMethod();
         when(mockJojParser.getTarget()).thenReturn(expectedTarget);
         // When
-        String target = mockJojParser.getTarget("");
+        String target = mockJojParser.getTarget();
         // Then
-        verify(mockJojParser).getTarget(anyString());
+        verify(mockJojParser, times(0)).getElementByXpath(anyString());
         assertTrue(target.isBlank());
     }
 
@@ -158,13 +158,14 @@ public class JojParserTests {
     @Tag("basic")
     @DisplayName("Should not extract if empty link")
     public void shouldNotExtractIfEmptyLink() throws IOException {
-      // Given
-      String emptyLink = "\t \n";
-      when(mockJojParser.extract(anyString())).thenCallRealMethod();
-      // When
-      NotValidLinkException ex = assertThrows(NotValidLinkException.class, () -> mockJojParser.extract(emptyLink));
-      // Then
-      assertEquals(new NotValidLinkException(emptyLink).getMessage(), ex.getMessage());
+        // Given
+        String emptyLink = "\t \n";
+        when(mockJojParser.extract(anyString())).thenCallRealMethod();
+        // When
+        NotValidLinkException ex =
+                assertThrows(NotValidLinkException.class, () -> mockJojParser.extract(emptyLink));
+        // Then
+        assertEquals(new NotValidLinkException(emptyLink).getMessage(), ex.getMessage());
     }
-    
+
 }
