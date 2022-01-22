@@ -22,4 +22,3 @@ jobs:
       with:
         file: target/coverage-reports/jacoco/jacoco.xml
         flags: codecov
-

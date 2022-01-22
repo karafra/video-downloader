@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import com.karafra.bitchutedl.exceptions.NotValidLinkException;
 import com.karafra.bitchutedl.parser.AbstractSimpleParser;
+import com.karafra.bitchutedl.platforms.bitchute.dtos.Download;
 import com.karafra.bitchutedl.platforms.bitchute.dtos.DownloadPageProps;
 import com.karafra.bitchutedl.platforms.joj.utils.JojUtils;
 
@@ -30,8 +31,13 @@ public class JojParser extends AbstractSimpleParser {
         if (!JojUtils.isJojLink(linkToVideo)) {
             throw new NotValidLinkException(linkToVideo);
         }
-
-        return null;
+        String embedLink = getLinkToEmbed();
+        get(linkToVideo);
+        Download download = new Download();
+        download.setLink(getTarget(embedLink));
+        DownloadPageProps props = new DownloadPageProps();
+        props.addDownload(download);
+        return props;
     }
 
 
@@ -44,5 +50,15 @@ public class JojParser extends AbstractSimpleParser {
         Element element = getElementByXpath(
                 "//iframe[contains(@class, \"kframe b-player-container js-player-container\")]");
         return element.attr("src");
+    }
+
+    protected String getTarget() {
+        Element element = getElementByXpath("//iframe[contains(@class, \"rmp-object-fit-contain rmp-video\")]");
+        return element.attr("src");
+    }
+
+    public String getTarget(String link) {
+        get(link);
+        return getTarget();
     }
 }
