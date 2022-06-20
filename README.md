@@ -23,7 +23,6 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![codecov][codecov-shield]][codecov-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -36,7 +35,7 @@
   <p align="center">
     Utility for easy download of videos directly from CDN
     <br />
-    <a href="https://karafra.github.io/spring-boot/"><strong>Explore the docs »</strong></a>
+    <a href="https://karafra.github.io/video-downloader/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/karafra/spring-boot">View Demo</a>
@@ -229,5 +228,5 @@ Project Link: [https://github.com/karafra/spring-boot](https://github.com/karafr
 [license-shield]: https://img.shields.io/github/license/karafra/spring-boot.svg?style=for-the-badge
 [license-url]: https://github.com/karafra/spring-boot/blob/master/LICENSE.txt
 [product-screenshot]: images/screenshot.png
-[codecov-shield]: https://img.shields.io/codecov/c/github/karafra/spring-boot/master?style=for-the-badge&token=JT7B2MF504
-[codecov-url]: https://codecov.io/gh/karafra/spring-boot
+[codecov-shield]: https://img.shields.io/codecov/c/github/karafra/video-downloader?style=for-the-badge&token=JT7B2MF504
+[codecov-url]: https://codecov.io/gh/karafra/video-downloader
